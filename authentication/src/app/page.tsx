@@ -24,7 +24,9 @@ export default function LoginPage() {
       });
       console.log({response})
       if (response.ok) {
-        console.log("here")
+        localStorage.setItem("username",username)
+        localStorage.setItem("password",password)
+
         router.push('/home');  // Redirect to the Home page after successful login
       } else {
         // Check if there's content to parse
